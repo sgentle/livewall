@@ -1,0 +1,9 @@
+#!/bin/bash
+QUALITY=${2:-bestvideo}
+if [[ $1 == "http"* ]]; then
+  URL=`youtube-dl -f $QUALITY -g $1`;
+else
+  URL=$1
+fi
+open -na /Applications/VLC.app "$URL" --args --loop --no-osd --no-macosx-nativefullscreenmode --video-wallpaper
+echo 'tell application "VLC" to close every window' | osascript
