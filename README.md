@@ -47,9 +47,12 @@ livewall https://www.youtube.com/watch?v=KUgrBTNbSe4
 
 You can also specify a quality like this:
 ```
-livewall https://www.youtube.com/watch?v=KUgrBTNbSe4 720p
+livewall https://www.youtube.com/watch?v=KUgrBTNbSe4 [height=720]
 ```
 
+By default, it uses the quality `bestvideo`, which means no audio for Youtube's
+1080p+ streams. If you want the highest quality stream with audio (usually
+720p), you can use `best` as the quality.
 
 I have a list of neat places to look for Youtube nature videos [on my
 website](https://samgentle.com/posts/2015-03-09-livewall).
